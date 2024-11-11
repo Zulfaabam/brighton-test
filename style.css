@@ -1,0 +1,216 @@
+:root {
+  --purple: #8532a8;
+  --purple-sec: #b52ce3;
+  --purple-acc: #e77ff5;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5rem;
+}
+
+body {
+  margin: 0;
+  position: relative;
+}
+
+.logo {
+  color: white;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.logo svg {
+  fill: white;
+  width: 2rem;
+}
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.navbar {
+  position: fixed;
+  inset: 0;
+  padding: 0.5rem 1rem;
+  background-color: var(--purple);
+  height: 3rem;
+}
+
+.container-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: white;
+}
+
+.connect-btn {
+  background-color: white;
+  border-radius: 999px;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: var(--purple);
+  font-weight: 600;
+  display: block;
+}
+
+.hero {
+  padding-top: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--purple);
+  height: 30rem;
+}
+
+.container-hero {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 4rem;
+}
+
+.hero-left h1 {
+  color: white;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-left p {
+  color: white;
+  font-size: 1.1rem;
+  margin: 0;
+  padding: 0;
+  opacity: 0.8;
+  max-width: 20rem;
+  font-weight: 600;
+}
+
+.hero-left button {
+  background: none;
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-left button span {
+  opacity: 0.8;
+  font-weight: 600;
+}
+
+.hero-left button svg {
+  width: 1.5rem;
+}
+
+.hero-right svg {
+  width: 25rem;
+}
+
+@media screen and (max-width: 768px) {
+  .container-hero {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-left {
+    gap: 0.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .hero-left h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-left p {
+    font-size: 0.8rem;
+  }
+
+  .hero-left button {
+    margin: 0 auto;
+  }
+
+  .hero-right svg {
+    width: 15rem;
+  }
+}
+
+.features {
+  padding: 4rem 0;
+}
+
+.features-title {
+  text-align: center;
+  margin: 0 0 4rem 0;
+}
+
+.features-title h2 {
+  color: var(--purple);
+  font-size: 1.75rem;
+  margin: 0 0 0.75rem 0;
+  padding: 0;
+}
+
+.features-title p {
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  opacity: 0.8;
+}
+
+.features-item-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.features-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.features-item p {
+  margin: 0;
+  max-width: 10rem;
+  text-align: center;
+  color: var(--purple);
+  opacity: 0.7;
+  font-weight: 600;
+}
+
+.features-item div svg {
+  width: 4.5rem;
+  height: 4.5rem;
+  margin: 0;
+}

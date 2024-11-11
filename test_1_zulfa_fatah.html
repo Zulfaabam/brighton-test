@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test 1 Zulfa Fatah</title>
+  </head>
+  <body>
+    <div>
+      <div id="show-int" style="width: fit-content; height: 50px"></div>
+      <div
+        id="show-int-formatted"
+        style="width: fit-content; height: 50px"
+      ></div>
+      <div id="show-name" style="width: fit-content; height: 50px"></div>
+      <div id="show-name-edited" style="width: fit-content; height: 50px"></div>
+      <div id="show-arr" style="width: fit-content; height: 50px"></div>
+      <div id="show-arr-sam" style="width: fit-content; height: 50px"></div>
+      <div id="show-arr-aceh" style="width: fit-content; height: 50px"></div>
+      <div id="show-arrObj" style="width: fit-content; height: 50px"></div>
+      <div id="show-arrObj-cat" style="width: fit-content; height: 50px"></div>
+      <div id="show-arrObj-join" style="width: fit-content; height: 50px"></div>
+    </div>
+    <script>
+      const formatter = new Intl.NumberFormat();
+
+      // no 1 - 2
+      let integer = 77777;
+
+      const showInt = document.querySelector('#show-int');
+      const showIntFormatted = document.querySelector('#show-int-formatted');
+
+      showInt.innerHTML = `Show integer: ${integer}`;
+      showIntFormatted.innerHTML = `Show integer formatted: ${formatter.format(
+        integer
+      )}`;
+
+      // no 3
+      let name = 'Zulfa Fatah Akbar Ahmad';
+
+      const showName = document.querySelector('#show-name');
+      const showNameEdited = document.querySelector('#show-name-edited');
+
+      showName.innerHTML = `${name} CrossTechno Developer`;
+      showNameEdited.innerHTML = `${name} CrossTechno Developer`
+        .toLowerCase()
+        .replaceAll('o', 'A');
+
+      // no 4
+      let arr = [];
+
+      arr = ['Surabaya', 'Jakarta', 'Semarang', 'Makassar'];
+
+      let copiedArr1 = structuredClone(arr);
+      let copiedArr2 = structuredClone(arr);
+
+      const samarindaArr = copiedArr1.splice(2, 1, 'Samarinda');
+      const acehArr = copiedArr2.push('Aceh');
+
+      const showArr = document.querySelector('#show-arr');
+      const showArrSam = document.querySelector('#show-arr-sam');
+      const showArrAceh = document.querySelector('#show-arr-aceh');
+
+      showArr.innerHTML = arr;
+      showArrSam.innerHTML = copiedArr1;
+      showArrAceh.innerHTML = copiedArr2;
+
+      // no 5
+      let arrObj = [];
+
+      arrObj = [
+        {
+          fruit: 'Orange',
+        },
+        {
+          animal: 'Dog',
+        },
+        {
+          bird: 'Eagle',
+        },
+        {
+          food: 'Rice',
+        },
+      ];
+
+      let copiedArrObj1 = structuredClone(arrObj);
+
+      const cat = copiedArrObj1.map((a) => {
+        if (a.animal === 'Dog') {
+          return { animal: 'Cat' };
+        } else {
+          return { ...a };
+        }
+      });
+
+      const showArrObj = document.querySelector('#show-arrObj');
+      const showArrObjCat = document.querySelector('#show-arrObj-cat');
+      const showArrObjJoin = document.querySelector('#show-arrObj-join');
+
+      showArrObj.innerHTML = arrObj.map(
+        (a) => `${Object.keys(a)}: ${Object.values(a)}`
+      );
+      showArrObjCat.innerHTML = cat.map(
+        (a) => `${Object.keys(a)}: ${Object.values(a)}`
+      );
+      showArrObjJoin.innerHTML = arrObj
+        .concat(cat)
+        .map((a) => `${Object.keys(a)}: ${Object.values(a)}`);
+
+      //no 6
+      let abc = 'abc';
+      let xyz = 'xyz';
+      let def = 'def';
+
+      function gambarPattern(x, y) {}
+    </script>
+  </body>
+</html>
